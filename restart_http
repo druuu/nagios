@@ -1,0 +1,15 @@
+#!/bin/sh
+
+case "$1" in
+OK)
+    echo "test_httpd 1 `date +%s`" | nc -q0 88.99.114.148 2003
+	;;
+WARNING)
+	;;
+UNKNOWN)
+	;;
+CRITICAL)
+    echo "test_httpd 1 `date +%s`" | nc -q0 88.99.114.148 2003
+	;;
+esac
+exit 0
