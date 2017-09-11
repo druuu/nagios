@@ -5,11 +5,16 @@ OK)
     echo "test_httpd 1 `date +%s`" | nc -q0 88.99.114.148 2003
 	;;
 WARNING)
+    echo "test_httpd 2 `date +%s`" | nc -q0 88.99.114.148 2003
 	;;
 UNKNOWN)
+    echo "test_httpd 2 `date +%s`" | nc -q0 88.99.114.148 2003
 	;;
 CRITICAL)
-    echo "test_httpd 1 `date +%s`" | nc -q0 88.99.114.148 2003
+    echo "test_httpd 2 `date +%s`" | nc -q0 88.99.114.148 2003
 	;;
+*)
+    echo "test_httpd 1 `date +%s`" | nc -q0 88.99.114.148 2003
+    ;;
 esac
 exit 0
